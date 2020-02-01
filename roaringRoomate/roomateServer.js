@@ -7,12 +7,12 @@ var io = require("socket.io").listen(server);
 roommates = []; //users array
 roomConnections = []; //connections array
 
-server.listen(process.env.PORT || 2020);  // It will run on localhost:(any number)
+server.listen(process.env.PORT || 0824);  
 console.log("Roomate Pairing Server Is Up");
 
 app.get("/", function(req, res){
 
-	res.sendFile(__dirname + "/index.html"); //links to html file CHANGE /index.html to you actually html file
+	res.sendFile(__dirname + "/index.html");
 
 });
 
@@ -32,7 +32,7 @@ io.sockets.on("connection", function(socket){
 
 		roommates.splice(roommates.indexOf(socket.username), 1); //accessing the array memers
 
-						io.sockets.emit("roommate left"); //checks if memer left
+						io.sockets.emit("roommate left");
 
 	roomConnections.splice(roomConnections.indexOf(socket),1);
 	console.log("Roomate disconnected: %s ", roomConnections.length);
@@ -40,7 +40,7 @@ io.sockets.on("connection", function(socket){
 
 	//send dem meme messages
 	socket.on("send message", function(data){
-		console.log(data);// shows what the memers typed in console
+		console.log(data);//
 		io.sockets.emit("new message", {msg: data});
 
 
