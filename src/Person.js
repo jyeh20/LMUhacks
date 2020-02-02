@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './Person.css';
-import {useEffect, useState} from 'react';
+import './texts.css';
 
 
 // props = {item, blah}

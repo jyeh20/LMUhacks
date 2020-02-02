@@ -1,12 +1,8 @@
 import React from 'react';
-import firebase from './lib/firebase';
-import {useEffect, useState} from 'react';
-import Person from './Person';
 import Register from './Register';
 import './App.css';
 import Home from './Home';
 import Users from  './Users';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,15 +16,26 @@ export default function Function() {
       <div>
         <nav>
           <ul>
-            <li>
+            <ul>
+              <h5 className="Links">
               <Link to="/home">Home</Link>
-            </li>
-            <li>
+              </h5>
+            </ul>
+            <ul>
+              <h5 className="Links">
               <Link to="/register">Register</Link>
-            </li>
-            <li>
+              </h5>
+            </ul>
+            <ul>
+              <h5 className="Links">
               <Link to="/users">Members</Link>
-            </li>
+              </h5>
+            </ul>
+            {/* <ul>
+              <h5 className="Links">
+              <Link to="/chat">Chat Room</Link>
+              </h5>
+            </ul> */}
           </ul>
         </nav>
 
@@ -44,9 +51,14 @@ export default function Function() {
           <Route path="/users">
             <Users />
           </Route>
+          {/* <Route path="/Chat">
+            <Chat />
+          </Route> */}
         </Switch>
       </div>
     </Router>
   );
 }
+
+
 

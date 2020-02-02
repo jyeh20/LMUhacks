@@ -2,8 +2,6 @@ import React from 'react';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
-import Register from './Register';
-import App from './App';
 
 function Users() {
     const [items, setItems] = useState([]);

@@ -1,12 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Slider, { Range } from 'rc-slider';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import './App.css';
 import firebase from './lib/firebase';
-import {useEffect, useState} from 'react';
-import Person from './Person';
 import {Redirect} from 'react-router-dom';
 import 'rc-slider/assets/index.css';
 
@@ -17,13 +13,13 @@ class Register extends React.Component{
         this.state = {
             name: "",
             major: "",
-            year: "",
+            year: "other",
             interests: "",
             noise: "",
             sleep: "",
-            sex: "",
+            sex: "other",
             smoking: "",
-            drinking: "",
+            drinking: "n/a",
             friendliness: "",
             car: "",
             cleanliness: "",
@@ -101,7 +97,7 @@ class Register extends React.Component{
     }
     render() {
       const drink = [
-        'Yes', 'No', 'n/a'
+        'Yes', 'No', "Doesn't matter to me"
       ];
       const defaultDrink = drink[2];
       const smoke = [
@@ -127,29 +123,29 @@ class Register extends React.Component{
       }
         return (
             <div>
-            <h3>Name:</h3>
+            <h3 className="Register">Full Name:</h3>
             <input 
                 type="text"
                 value={this.state.name} 
                 onChange={this.handleNameChange}
             />
-            <h3>Major:</h3>
+            <h3 className="Register">Major:</h3>
             <input 
                 type="text"
                 value={this.state.major} 
                 onChange={this.handleMajorChange}
             />
-            <h3>Year:</h3>
+            <h3 className="Register">Year:</h3>
             <Dropdown options={options} onChange={this.handleYearChange} value={this.state.year} placeholder="Select a year" />
             
             
-            <h3>Sex</h3>
+            <h3 className="Register">Sex:</h3>
             <Dropdown options={sex} onChange={this.handleSexChange} value={this.state.sex} placeholder="Select sex" />
 
-            <h3>When do you usually go to sleep?</h3>
+            <h3 className="Register">What time do you usually go to sleep?</h3>
             <Dropdown options={sleep} onChange={this.handleSleepChange} value={this.state.sleep} placeholder="Select the approximate time" />
             
-            <h3>How clean are you?</h3>
+            <h3 className="Register">On a scale of 1(lowest) to 10(highest), how clean are you?</h3>
             
             <div class="slidecontainer">
               <input type="range" min="0" max="10" value="5" step="1" class="slider" id="myRange" value={this.state.cleanliness} onChange={this.handleCleanlinessChange}/>
@@ -158,13 +154,13 @@ class Register extends React.Component{
              <output id="amount" name="amount" for="myRange">{this.state.cleanliness}</output>
             </div>
             
-            <h3>Do you smoke?</h3>
+            <h3 className="Register">Do you smoke?</h3>
             <Dropdown options={smoke} onChange={this.handleSmokeChange} value={this.state.smoke} placeholder="Y/N" />
 
-            <h3>Do you want to live with someone who drinks alcohol?</h3>
+            <h3 className="Register">Do you want to live with someone who drinks alcohol?</h3>
             <Dropdown options={drink} onChange={this.handleDrinkChange} value={this.state.drink} placeholder="Y/N" />
 
-            <h3>Acceptable noise level</h3>
+            <h3 className="Register">Acceptable noise level on a scale of 1(lowest) to 10(highest):</h3>
             <div class="slidecontainer">
               <input type="range" min="0" max="10" value="5" step="1" class="slider" id="noiseLevel" value={this.state.noise} onChange={this.handleNoiseChange}/>
                                                    
@@ -172,13 +168,13 @@ class Register extends React.Component{
               <output id="noise" name="noise" for="noiseLevel">{this.state.noise}</output>
             </div>
 
-            <h3>Do you have a car?</h3>
+            <h3 className="Register">Do you have a car?</h3>
             <Dropdown options={smoke} onChange={this.handleCarChange} value={this.state.car} placeholder="Y/N" />
 
-            <h3>Would you prefer living with someone who has a car?</h3>
+            <h3 className="Register">Would you prefer living with someone who has a car?</h3>
             <Dropdown options={smoke} onChange={this.handleNeedCarChange} value={this.state.needcar} placeholder="Y/N" />
 
-            <h3>On a scale of 1-10, how well do you generally get along with others?</h3>
+            <h3 className="Register">On a scale of 1-10, how well do you generally get along with others?</h3>
             <div class="slidecontainer">
               <input type="range" min="0" max="10" value="5" step="1" class="slider" id="friendliness" value={this.state.friendliness} onChange={this.handleFriendlinessChange}/>
                                                    
@@ -186,7 +182,7 @@ class Register extends React.Component{
               <output id="friendliness" name="friendliness" for="friendliness">{this.state.friendliness}</output>
             </div>
 
-            <h3>Interests (3 at most please!)</h3>
+            <h3 className="Register">Interests (3 at most please!):</h3>
             <input
               type="text"
               value={this.state.interests}
