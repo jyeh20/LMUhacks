@@ -1,0 +1,17 @@
+{
+  "name": "roaringroomates",
+  "version": "1.0.0",
+  "description": "a fun chatting webpage for my boiizzz in the comments",
+  "main": "roomateServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "group",
+  "license": "ISC",
+  "dependencies": {
+    "balanced-match": "^1.0.0",
+    "express": "*",
+    "socket.io": "*"
+  }
+}
