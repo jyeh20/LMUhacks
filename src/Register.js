@@ -18,7 +18,6 @@ class Register extends React.Component{
             noise: "",
             sleep: "",
             sex: "other",
-            smoking: "",
             drinking: "n/a",
             friendliness: "",
             car: "",
