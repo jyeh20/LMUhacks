@@ -1,14 +1,17 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCO3cVS-l13pFHkFms4aydxEEESabbKx0A",
-    authDomain: "qwerhacks-d355f.firebaseapp.com",
-    databaseURL: "https://qwerhacks-d355f.firebaseio.com",
-    projectId: "qwerhacks-d355f",
-    storageBucket: "qwerhacks-d355f.appspot.com",
-    messagingSenderId: "664515396454",
-    appId: "1:664515396454:web:c22e42c67dd983e3c5fea7"
-  };
+  apiKey: "AIzaSyDTdOvvs-QNs84ZK8n8kQFKjiz-R_7FGSU",
+  authDomain: "lmuhacks.firebaseapp.com",
+  databaseURL: "https://lmuhacks.firebaseio.com",
+  projectId: "lmuhacks",
+  storageBucket: "lmuhacks.appspot.com",
+  messagingSenderId: "148770675715",
+  appId: "1:148770675715:web:1459244c79c7d1832b0236",
+  measurementId: "G-S3VD8043KN"
+};
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 export default firebase;

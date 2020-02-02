@@ -1,8 +1,15 @@
 h1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-family: 'Varela Round', sans-serif;
     color: black;
 }
-h2 {
+.hp {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-family: 'Varela Round', sans-serif;
-    color: rgb(63, 63, 63);
+    color: #FFFFFF;
 }
+

@@ -27,7 +27,7 @@ export default function Function() {
               <Link to="/register">Register</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users">Members</Link>
             </li>
           </ul>
         </nav>

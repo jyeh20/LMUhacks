@@ -41,12 +41,14 @@ function Home() {
       <div className="App">
         <header className="App-header">
         <div class="background-image"></div>
-        <he class="rainbow-text">[L]et's [G]et [B]read [T]his</he>
+        <he class="rainbow-text">Roaring Roommates</he>
         <br />
         <br />
         <br />
+        <button class="homeButton">
         <a href="/register">Register Today!</a>
         {/* <button onClick={() => }"./src/Register.js">Register today!</button> */}
+        </button>
         </header>
         
       </div>
