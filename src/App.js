@@ -3,6 +3,7 @@ import Register from './Register';
 import './App.css';
 import Home from './Home';
 import Users from  './Users';
+import Chat from './ChatComponent';
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,11 +32,11 @@ export default function Function() {
               <Link to="/users">Members</Link>
               </h5>
             </ul>
-            {/* <ul>
+            <ul>
               <h5 className="Links">
               <Link to="/chat">Chat Room</Link>
               </h5>
-            </ul> */}
+            </ul>
           </ul>
         </nav>
 
@@ -51,9 +52,9 @@ export default function Function() {
           <Route path="/users">
             <Users />
           </Route>
-          {/* <Route path="/Chat">
+          <Route path="/chat">
             <Chat />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
     </Router>

@@ -35,7 +35,7 @@ function randomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
-class App extends Component {
+class Chat extends Component {
   state = {
     messages: [],
     member: {
@@ -46,7 +46,7 @@ class App extends Component {
 
   constructor() {
     super();
-    this.drone = new window.Scaledrone("b3YaTflKThvdFIbl", {
+    this.drone = new window .Scaledrone("b3YaTflKThvdFIbl", {
       data: this.state.member
     });
     this.drone.on('open', error => {
@@ -67,8 +67,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="Chat">
+        <div className="Chat">
           <h1>My Chat App</h1>
         </div>
         <Messages
@@ -91,4 +91,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default Chat;
