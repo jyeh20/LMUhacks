@@ -6,22 +6,6 @@
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: #AB0C2F;
-  color: white;
-}
-
-.nav-links{
-  width: 40%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
 .App-header {
   background-color: #0076A5;
   min-height: 100vh;
@@ -71,78 +55,8 @@ body {
   cursor: pointer;
 }
 
-.Chat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 93vh;
-}
-
-.Chat-header {
-  background-color: #262626;
-  overflow: visible;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-
-.Messages-list {
-  padding: 20px 0;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  list-style: none;
-  padding-left: 0;
-  flex-grow: 1;
-  overflow: auto;
-}
-
-.Messages-message {
-  display: flex;
-  margin-top: 10px;
-}
-
-.Messages-message.currentMember {
-  /*justify-content: flex-end;*/
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-.Message-content {
-  display: inline-block;
-}
-
-.currentMember > .Message-content {
-  align-items: flex-end;
-}
-
-.Messages-message > .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 10px -10px;
-}
-
-.Message-content > .username {
-  display: block;
-  color: gray;
-  font-size: 14px;
-  padding-bottom: 4px;
-}
-
-.Message-content > .text {
-  padding: 10px;
-  max-width: 400px;
-  margin: 0;
-  border-radius: 12px;
-  background-color: cornflowerblue;
-  color: white;
-  display: inline-block;
-}
-
 .currentMember > .Message-content .text {
-  background-color: orangered;
+  background-color: #AB0C2F;
 }
 
 form {
@@ -157,14 +71,14 @@ input {
   padding: 5px;
   font-size: 16px;
   border-radius: 8px;
-  border: 1px solid orangered;
+  border: 1px solid #AB0C2F;
   flex-grow: 1;
 }
 
 button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: orangered;
+  background-color: #AB0C2F;
   color: white;
   border: none;
   border-radius: 8px;
@@ -181,17 +95,9 @@ h1 {
 .hp {
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-family: 'Varela Round', sans-serif;
   color: #FFFFFF;
-}
-
-.Register {
-  text-align: left;
-  font-family: 'Metric', sans-serif;
-  color: #FFFFFF;
-  font-size: larger;
-
 }
 
 .Links {

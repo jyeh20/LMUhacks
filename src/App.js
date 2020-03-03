@@ -1,10 +1,10 @@
 import React from 'react';
-import Register from './Register';
-import './App.css';
-import Home from './Home';
-import Users from  './Users';
-import Chat from './ChatComponent';
-import Nav from './Nav';
+import Register from './Components/Register';
+import './CSS/App.css';
+import Home from './Components/Home';
+import Users from  './Components/Users';
+import Chat from './Components/ChatComponent';
+import Nav from './Components/Nav';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,8 +19,8 @@ function App() {
         <Switch>
           <Route path="/" exact component = {Home}/>
           <Route path="/register" component = {Register}/> 
-          <Route path="/users" component = {Users}/>
-          <Route path="/chatcomponent" component = {Chat} />
+          <Route path="/Users" component = {Users}/>
+          <Route path="/chatcomponent" exact component = {Chat} />
         </Switch>      
       </div>
     </Router>

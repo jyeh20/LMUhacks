@@ -1,8 +1,8 @@
 import React from 'react';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import './App.css';
-import firebase from './lib/firebase';
+import '../CSS/Register.css';
+import firebase from '../lib/firebase';
 import {Redirect} from 'react-router-dom';
 import 'rc-slider/assets/index.css';
 

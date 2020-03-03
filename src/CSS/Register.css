@@ -1,0 +1,12 @@
+.Register {
+    text-align: center;
+    justify-content: space-around;
+    font-family: 'Metric', sans-serif;
+    color: #FFFFFF;
+    font-size: larger;
+  
+  }
+
+  .text {
+      align-items: left;
+  }

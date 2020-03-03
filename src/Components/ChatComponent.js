@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../CSS/Chat.css';
 import Messages from "./Messages";
 import Input from "./Input";
 

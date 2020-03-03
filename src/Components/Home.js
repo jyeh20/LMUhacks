@@ -1,12 +1,15 @@
 import React from 'react';
-import firebase from './lib/firebase';
+import firebase from '../lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
 
-function Users() {
+
+
+function Home() {
+
     const [items, setItems] = useState([]);
   
-    //componentDidMount
+    //componentDidMount()
     useEffect(() => {
       //call these once when app loads from here
       const db = firebase.firestore();
@@ -32,13 +35,27 @@ function Users() {
       //   setItems([1,2,3]);
       // }, 1000)
     }, []);
-  
+    
+    items.map(item => <Person item={item}/>)
+    
     console.log(items);
     return (
-        <div>
-        {items.map(item => <Person item={item}/>)}
-        </div>
-        );
-      
-    }
-export default Users;
+      <div className="App">
+        <header className="App-header">
+        <div class="background-image"></div>
+        <h2 class="he">Welcome to Roaring Roommates!</h2>
+        <br />
+        <br />
+        <br />
+        <button class="homeButton">
+        <a href="/register">Register Today!</a>
+        </button>
+        </header>
+        
+      </div>
+    );
+  }
+  
+  export default Home;
+  
+  
