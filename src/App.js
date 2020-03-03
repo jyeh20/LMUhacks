@@ -4,62 +4,29 @@ import './App.css';
 import Home from './Home';
 import Users from  './Users';
 import Chat from './ChatComponent';
+import Nav from './Nav';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
-export default function Function() {
+function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <ul>
-              <h5 className="Links">
-              <Link to="/home">Home</Link>
-              </h5>
-            </ul>
-            <ul>
-              <h5 className="Links">
-              <Link to="/register">Register</Link>
-              </h5>
-            </ul>
-            <ul>
-              <h5 className="Links">
-              <Link to="/users">Members</Link>
-              </h5>
-            </ul>
-            <ul>
-              <h5 className="Links">
-              <Link to="/chat">Chat Room</Link>
-              </h5>
-            </ul>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+      <div className="App">
+        <Nav />
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/chat">
-            <Chat />
-          </Route>
-        </Switch>
+          <Route path="/" exact component = {Home}/>
+          <Route path="/register" component = {Register}/> 
+          <Route path="/users" component = {Users}/>
+          <Route path="/chatcomponent" component = {Chat} />
+        </Switch>      
       </div>
     </Router>
   );
 }
 
+export default App;
 
 

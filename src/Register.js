@@ -98,24 +98,19 @@ class Register extends React.Component{
       const drink = [
         'Yes', 'No', "Doesn't matter to me"
       ];
-      const defaultDrink = drink[2];
       const smoke = [
         'Yes', 'No'
       ];
-      const defaultSmoke = smoke[1];
       const sex = [
         'Male', 'Female', 'Other'
       ];
-      const defaultSex = sex[2];
       const options = [
         'Freshman', 'Sophomore', 'Junior', 'Senior', 'Other'
       ];
-      const defaultOption = options[0];
 
       const sleep = [
         '7:00PM or earlier', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM', '11:00PM', '11:30PM', '12:00AM or later'
       ];
-      const defaultSleep = sleep[0];
 
       if (this.state.toContact=== true) {
         return <Redirect to='/users' />
@@ -146,11 +141,11 @@ class Register extends React.Component{
             
             <h3 className="Register">On a scale of 1(lowest) to 10(highest), how clean are you?</h3>
             
-            <div class="slidecontainer">
-              <input type="range" min="0" max="10" value="5" step="1" class="slider" id="myRange" value={this.state.cleanliness} onChange={this.handleCleanlinessChange}/>
+            <div className="slidecontainer">
+              <input type="range" min="0" max="10" step="1" className="slider" id="myRange" value={this.state.cleanliness} onChange={this.handleCleanlinessChange}/>
                                                    
 
-             <output id="amount" name="amount" for="myRange">{this.state.cleanliness}</output>
+             <output id="amount" name="amount" htmlFor="myRange">{this.state.cleanliness}</output>
             </div>
             
             <h3 className="Register">Do you smoke?</h3>
@@ -160,11 +155,11 @@ class Register extends React.Component{
             <Dropdown options={drink} onChange={this.handleDrinkChange} value={this.state.drink} placeholder="Y/N" />
 
             <h3 className="Register">Acceptable noise level on a scale of 1(lowest) to 10(highest):</h3>
-            <div class="slidecontainer">
-              <input type="range" min="0" max="10" value="5" step="1" class="slider" id="noiseLevel" value={this.state.noise} onChange={this.handleNoiseChange}/>
+            <div className="slidecontainer">
+              <input type="range" min="0" max="10" step="1" className="slider" id="noiseLevel" value={this.state.noise} onChange={this.handleNoiseChange}/>
                                                    
 
-              <output id="noise" name="noise" for="noiseLevel">{this.state.noise}</output>
+              <output id="noise" name="noise" htmlFor="noiseLevel">{this.state.noise}</output>
             </div>
 
             <h3 className="Register">Do you have a car?</h3>
@@ -174,11 +169,11 @@ class Register extends React.Component{
             <Dropdown options={smoke} onChange={this.handleNeedCarChange} value={this.state.needcar} placeholder="Y/N" />
 
             <h3 className="Register">On a scale of 1-10, how well do you generally get along with others?</h3>
-            <div class="slidecontainer">
-              <input type="range" min="0" max="10" value="5" step="1" class="slider" id="friendliness" value={this.state.friendliness} onChange={this.handleFriendlinessChange}/>
+            <div className="slidecontainer">
+              <input type="range" min="0" max="10" step="1" className="slider" id="friendliness" value={this.state.friendliness} onChange={this.handleFriendlinessChange}/>
                                                    
 
-              <output id="friendliness" name="friendliness" for="friendliness">{this.state.friendliness}</output>
+              <output id="friendliness" name="friendliness" htmlFor="friendliness">{this.state.friendliness}</output>
             </div>
 
             <h3 className="Register">Interests (3 at most please!):</h3>

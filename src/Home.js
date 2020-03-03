@@ -2,6 +2,9 @@ import React from 'react';
 import firebase from './lib/firebase';
 import {useEffect, useState} from 'react';
 import Person from './Person';
+
+
+
 function Home() {
 
     const [items, setItems] = useState([]);
@@ -33,7 +36,8 @@ function Home() {
       // }, 1000)
     }, []);
     
-    {items.map(item => <Person item={item}/>)}
+    items.map(item => <Person item={item}/>)
+    
     console.log(items);
     return (
       <div className="App">

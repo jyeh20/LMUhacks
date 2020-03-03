@@ -46,7 +46,7 @@ class Chat extends Component {
 
   constructor() {
     super();
-    this.drone = new window .Scaledrone("b3YaTflKThvdFIbl", {
+    this.drone = new window.Scaledrone("b3YaTflKThvdFIbl", {
       data: this.state.member
     });
     this.drone.on('open', error => {
@@ -69,7 +69,7 @@ class Chat extends Component {
     return (
       <div className="Chat">
         <div className="Chat">
-          <h1>My Chat App</h1>
+          <h1>Roaring Roommates</h1>
         </div>
         <Messages
           messages={this.state.messages}

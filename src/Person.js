@@ -1,5 +1,5 @@
 import React from 'react';
-import './texts.css';
+import './App.css';
 
 
 // props = {item, blah}
